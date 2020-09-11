@@ -14,8 +14,32 @@ public class Solution {
     private static String[] strs;
     private static List<String> list;
     private static String[] sub;
+
     static {
         strs = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz",};
+    }
+
+    private static void f(int index, StringBuilder sb) {
+        if (index >= sub.length) {
+            list.add(sb.toString());
+        } else {
+            String s = sub[index];
+            for (int i = 0; i < s.length(); i++) {
+                sb.append(s.charAt(i));
+                f(index + 1, sb);
+                sb.deleteCharAt(index);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Solution().letterCombinations("23"));
+        System.out.println(new Solution().letterCombinations(""));
+//        System.out.println(new Solution().letterCombinations("2"));
+//        System.out.println(new Solution().letterCombinations("3"));
+//        System.out.println(new Solution().letterCombinations("4"));
+//        System.out.println(new Solution().letterCombinations("34"));
+//        System.out.println(new Solution().letterCombinations("234"));
     }
 
     public List<String> letterCombinations(String digits) {
@@ -37,28 +61,5 @@ public class Solution {
         f(0, new StringBuilder());
 
         return list;
-    }
-
-    private static void f(int index, StringBuilder sb) {
-        if (index >= sub.length) {
-            list.add(sb.toString());
-        } else {
-            String s = sub[index];
-            for (int i = 0; i < s.length(); i++) {
-                sb.append(s.charAt(i));
-                f(index+1, sb);
-                sb.deleteCharAt(index);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new Solution().letterCombinations("23"));
-        System.out.println(new Solution().letterCombinations(""));
-//        System.out.println(new Solution().letterCombinations("2"));
-//        System.out.println(new Solution().letterCombinations("3"));
-//        System.out.println(new Solution().letterCombinations("4"));
-//        System.out.println(new Solution().letterCombinations("34"));
-//        System.out.println(new Solution().letterCombinations("234"));
     }
 }
