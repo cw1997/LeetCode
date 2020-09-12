@@ -25,6 +25,9 @@ public class ListNode {
         val = x;
     }
 
+    public ListNode() {
+    }
+
 
     @Override
     public String toString() {
