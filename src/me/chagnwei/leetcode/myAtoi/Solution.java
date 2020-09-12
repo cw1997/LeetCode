@@ -1,8 +1,5 @@
 package me.chagnwei.leetcode.myAtoi;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-
 /**
  * @author cw1997 <867597730@qq.com>
  * @file null.java
@@ -10,6 +7,18 @@ import java.util.Deque;
  * @description
  */
 public class Solution {
+    public static void main(String[] args) {
+        System.out.printf("%d\n", new Solution().myAtoi("2147483646"));
+        System.out.printf("%d\n", new Solution().myAtoi(" 1"));
+        System.out.printf("%d\n", new Solution().myAtoi("    42"));
+        System.out.printf("%d\n", new Solution().myAtoi("42"));
+        System.out.printf("%d\n", new Solution().myAtoi("    -1"));
+        System.out.printf("%d\n", new Solution().myAtoi("    45   "));
+        System.out.printf("%d\n", new Solution().myAtoi("  fdas45fdsafsa"));
+        System.out.printf("%d\n", new Solution().myAtoi("-91283472332"));
+        System.out.printf("%d\n", new Solution().myAtoi("20000000000000000000"));
+    }
+
     public int myAtoi(String str) {
         if (str.isEmpty()) {
             return 0;
@@ -50,17 +59,5 @@ public class Solution {
         }
 
         return negative ? (int) -num : (int) num;
-    }
-
-    public static void main(String[] args) {
-        System.out.printf("%d\n", new Solution().myAtoi("2147483646"));
-        System.out.printf("%d\n", new Solution().myAtoi(" 1"));
-        System.out.printf("%d\n", new Solution().myAtoi("    42"));
-        System.out.printf("%d\n", new Solution().myAtoi("42"));
-        System.out.printf("%d\n", new Solution().myAtoi("    -1"));
-        System.out.printf("%d\n", new Solution().myAtoi("    45   "));
-        System.out.printf("%d\n", new Solution().myAtoi("  fdas45fdsafsa"));
-        System.out.printf("%d\n", new Solution().myAtoi("-91283472332"));
-        System.out.printf("%d\n", new Solution().myAtoi("20000000000000000000"));
     }
 }
