@@ -10,6 +10,17 @@ import java.util.Deque;
  * @description
  */
 public class Solution {
+    public static void main(String[] args) {
+        System.out.println(new Solution().isValid("()"));
+        System.out.println(new Solution().isValid("()[]{}"));
+        System.out.println(new Solution().isValid("()[()]{}"));
+        System.out.println(new Solution().isValid("()[[)]]{}"));
+        System.out.println(new Solution().isValid("([)]"));
+        System.out.println(new Solution().isValid(""));
+        System.out.println(new Solution().isValid("]"));
+        System.out.println(new Solution().isValid("["));
+    }
+
     public boolean isValid(String s) {
         try {
             Deque<Character> deque = new ArrayDeque<>();
@@ -52,16 +63,5 @@ public class Solution {
         } catch (Exception e) {
             return false;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new Solution().isValid("()"));
-        System.out.println(new Solution().isValid("()[]{}"));
-        System.out.println(new Solution().isValid("()[()]{}"));
-        System.out.println(new Solution().isValid("()[[)]]{}"));
-        System.out.println(new Solution().isValid("([)]"));
-        System.out.println(new Solution().isValid(""));
-        System.out.println(new Solution().isValid("]"));
-        System.out.println(new Solution().isValid("["));
     }
 }
