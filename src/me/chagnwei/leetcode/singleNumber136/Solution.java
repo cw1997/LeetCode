@@ -8,7 +8,7 @@ package me.chagnwei.leetcode.singleNumber136;
  */
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(new Solution().addBinary("11", "1"));
+//        System.out.println(new Solution().addBinary("11", "1"));
     }
 
     public int singleNumber(int[] nums) {

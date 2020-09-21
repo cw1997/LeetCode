@@ -10,8 +10,8 @@ import me.chagnwei.leetcode.common.ListNode;
  */
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(new Solution().addBinary("11", "1"));
-        System.out.println(new Solution().addBinary("1010", "1011"));
+//        System.out.println(new Solution().hasCycle("11", "1"));
+//        System.out.println(new Solution().hasCycle("1010", "1011"));
     }
 
     public boolean hasCycle(ListNode head) {
